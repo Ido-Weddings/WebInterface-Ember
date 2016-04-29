@@ -1,0 +1,53 @@
+<h2>Sign up</h2>
+<form>
+  <div>
+    {{input type="text"placeholder="Nome da Empresa"}}
+    <!-- Textarea Description -->
+    <div class="input-field col s12">
+      <textarea id="textarea1" class="materialize-textarea"></textarea>
+      <label for="textarea1">Descrição</label>
+    </div>
+  <!-- Fim textarea Description -->
+    {{input type="checkbox" name="isAdmin" checked=isAdmin}}
+    {{input placeholder="Preço Base"}}
+    {{input type="tel" placeholder="Telefone"}}
+    {{input type="tel" placeholder="Celular"}}
+    {{input type="text" placeholder="email"}}
+    {{input type="password" placeholder="Senha"}}
+    {{input type="password" placeholder="Confirme a Senha"}}
+    {{input type="text" placeholder="Endereço"}}
+    {{input type="number" placeholder="Capacidade"}}
+  </div>
+<!-- Checkbocks categories -->
+<label for="enterprise_Categorias da sua empresa">Categorias da sua empresa</label>
+<p>
+  <input type="checkbox" id="test5" />
+  <label for="test5">Cerimonial</label>
+</p>
+<p>
+  <input type="checkbox" id="test6" />
+  <label for="test6">Fotografia</label>
+</p>
+<p>
+  <input type="checkbox" id="test7" />
+  <label for="test7">Alfaiataria</label>
+</p>
+<p>
+  <input type="checkbox" id="test8" />
+  <label for="test8">Decoração</label>
+</p>
+<p>
+  <input type="checkbox" id="test9" />
+  <label for="test9">Música</label>
+</p>
+<p>
+  <input type="checkbox" id="test10" />
+  <label for="test10">Buffet</label>
+</p>
+<p>
+  <input type="checkbox" id="test11" />
+  <label for="test11">Decoração</label>
+</p>
+<!-- End checkbox of categories -->
+{{input type="submit" value="Cadastrar"}}
+</form>
