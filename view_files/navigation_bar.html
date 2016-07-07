@@ -1,0 +1,121 @@
+<style>
+.navbar {
+  --nav-bar-height: 75px;
+  --items-container-padding-height: 1%;
+  --items-padding-width: 15px;
+  --items-border-size: 1px;
+  --items-padding-height: 3%;
+  --items-border-color: white;
+  --link-hover-background-color: rgba(1, 1, 1, 0.2);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  background: blue;
+  justify-content: space-between;
+}
+.navbar .app-logo {
+  height: var(--nav-bar-height);
+  width: var(--nav-bar-height);
+  background-image: url(http://forcaeinteligencia.com/wp-content/uploads/2013/09/batata-ou-batata-doce.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  text-indent: -9999px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+}
+.navbar .app-logo:hover {
+  transform: scale(1.2);
+  -moz-transform: scale(1.2);
+}
+.navbar .app-logo a {
+  display: block;
+  height: var(--nav-bar-height);
+}
+.navbar .app-menu {
+  font-color: white;
+  color: white;
+}
+.navbar .app-menu a {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  vertical-align: middle;
+  position: relative;
+  display: block;
+  padding: 1.2em;
+  margin: -1.2em;
+}
+.navbar .app-menu a:visited, .navbar .app-menu a:link {
+  color: white;
+  text-decoration: none;
+}
+.navbar .app-menu a:hover, .navbar .app-menu a:active {
+  color: red;
+  font-size: 110%;
+  background-color: var(--link-hover-background-color);
+}
+
+@media screen and (min-width: 680px) {
+  .navbar .app-menu {
+    display: flex;
+    height: var(--nav-bar-height);
+    align-items: center;
+  }
+  .navbar .app-menu a {
+    line-height: calc(var(--nav-bar-height)/2);
+  }
+  .navbar .app-menu .login {
+    padding: 0px var(--items-padding-width);
+  }
+  .navbar .app-menu .our-team, .navbar .app-menu .advertise, .navbar .app-menu .partners {
+    padding: 0px var(--items-padding-width);
+    border-right: var(--items-border-size) solid white;
+    height: 50%;
+  }
+}
+@media screen and (max-width: 680px) {
+  .navbar {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .navbar .app-logo {
+    width: 100%;
+  }
+  .navbar .app-menu {
+    flex-direction: column;
+    padding-top: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .navbar .app-menu .our-team, .navbar .app-menu .advertise, .navbar .app-menu .partners, .navbar .app-menu .login {
+    border-top: calc(var(--items-border-size)/2) solid white;
+    padding: calc(var(--items-padding-height) * 5) var(--items-padding-width);
+  }
+}
+
+
+<div class="navbar">
+  <div class="app-logo">
+    <a href="default.asp" title="">  ok</a>
+  </div>
+  <div class="app-menu">
+    <div class="our-team">
+      <a href="http://slim-lang.com" title="Slim Homepage">Nossa Empresa</a>
+    </div>
+    <div class="advertise">
+      <a href="http://slim-lang.com" title="Slim Homepage">Divulgue seu Serviço</a>
+    </div>
+    <div class="partners">
+      <a href="http://slim-lang.com" title="Slim Homepage">Empresas Parceiras</a>
+    </div>
+    <div class="login">
+      <a href="http://slim-lang.com" title="Slim Homepage">Log in</a>
+    </div>
+  </div>
+</div>
